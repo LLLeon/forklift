@@ -1,0 +1,34 @@
+version: '2'
+services:
+    primary:
+        build: .
+        image: mongoset:primary
+        ports:
+            - "30001:27017"
+        volumes:
+            - .:/replicaset
+        networks:
+            - my_mongo_cluster
+
+    replica1:
+        build: .
+        image: mongoset:replica1
+        ports:
+            - "30002:27017"
+        volumes:
+            - .:/replicaset
+        networks:
+            - my_mongo_cluster
+
+    replica2:
+        build: .
+        image: mongoset:replica2
+        ports:
+            - "30003:27017"
+        volumes:
+            - .:/replicaset
+        networks:
+            - my_mongo_cluster
+
+networks:
+    my_mongo_cluster:
