@@ -1,1 +1,1 @@
-使用 docker-compose 部署 MongoDB 副本集可参考 [https://github.com/LLLeon/Blog/issues/12](这篇文章)。
+使用 docker-compose 部署 MongoDB 副本集可参考 [这篇文章](https://github.com/LLLeon/Blog/issues/12)。
